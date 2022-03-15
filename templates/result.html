@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+	<header>
+		<div class="container">
+		
+		<h2>Spam Detector For E-mail's and SMS</h2>
+		
+	</div>
+	</header>
+
+	<div class="results">	
+	{% if prediction == 1%}
+	<h1 style="color:red;text-align: center;">It's a Spam ❌❌❌</h1>
+	{% elif prediction == 0%}
+	<h1 style="color:blue;text-align: center;">It's not a Spam ✔️</h1>
+	{% endif %}
+	<h2>Every email marketer’s worst nightmare: the spam folder.</h2>
+
+		<h2>Nearly one in five emails gets caught by a spam filter and sent to the spam folder.</h2>
+		
+		<h2>Spam filters check for red flags like:</h2>
+		<ul>
+		<li>The use of certain words</li>
+		<li>Links to sketchy websites</li>
+		<li>Messages in ALL CAPS</li>
+		<li>Colorful and different sized fonts</li>
+		<li>Broken HTML code</li>
+		<li>Emails without an unsubscribe button</li>
+		</ul>
+	</div>
+	<div class= "Triggerwords">
+		<a href="{{ url_for('trigger')}}">❌❌SPAM WORDS TO AVOID❌❌</a>
+	</div>
+
+	<div id="wrapper">
+		<div class="box-area">
+		  <div id="box-front" class="box"></div>
+		  <div id="box-right" class="box"></div>
+		  <div id="box-back" class="box"></div>
+		  <div id="box-left" class="box"></div>
+		  <div id="box-top" class="box"></div>
+		  <div id="box-bottom" class="box"></div>
+		</div>
+	  </div>
+</body>
+<footer class="footer">
+		
+    <div class="footerContainer">
+		<p><em>Copyright &copy; 2022 All Rights Reserved</em></p>
+    </div>
+</html>
